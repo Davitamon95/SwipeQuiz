@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Swipe Quiz</string>
+
+    <!--Discription based strings-->
+    <string name="title">Quiz Instruction</string>
+    <string name="description">Swipe right for true, swipe left for false</string>
+
+    <!--Question based strings-->
+    <string name="valVSvar">A \'val\' and \'var\' are the same.</string>
+    <string name="ECTS">Mobile Application Development grants 12 ECTS</string>
+    <string name="KotlinJava">A Unit in Kotlin corresponds to a void in Java</string>
+    <string name="whenSwitch">In Kotlin \'when\' replaces the \'switch\' operator in Java</string>
+    <string name="extravraag">is gras groen</string>
+
+    <!--Feedback-->
+    <string name="correctFeedback">Answer is correct!</string>
+    <string name="incorrectFeedback">Answer is not correct</string>
+</resources>

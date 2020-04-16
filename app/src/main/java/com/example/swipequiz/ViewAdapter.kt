@@ -7,6 +7,12 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.item_question.view.*
 
+/**
+ * class met contructor betaande uit de lijst met data quistions om zo
+ * te koppelen aan de recyclerview
+ *
+ * Inner class om de textview te koppellen aan de data class quistions
+ */
 class ViewAdapter(private val questions: List<Questions>) :
         RecyclerView.Adapter<ViewAdapter.ViewHolder>(){
 

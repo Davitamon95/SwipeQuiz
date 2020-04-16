@@ -21,12 +21,16 @@ class MainActivity : AppCompatActivity() {
         initViews()
     }
 
+    /**
+     *Methode voor initialiseren van de start layout
+     */
     private fun initViews(){
         tvRecycler.layoutManager = LinearLayoutManager(this@MainActivity, RecyclerView.VERTICAL, false)
         tvRecycler.adapter = viewAdapter
         tvRecycler.addItemDecoration(DividerItemDecoration(this@MainActivity, DividerItemDecoration.VERTICAL))
 
-        //Add Questions here
+        //Hier kunnen vragen worden toegevoegd
+
         questions.add(Questions(getString(R.string.valVSvar), false))
         questions.add(Questions(getString(R.string.ECTS), false))
         questions.add(Questions(getString(R.string.KotlinJava), true))
@@ -46,9 +50,17 @@ class MainActivity : AppCompatActivity() {
                 return false
             }
 
+            /**
+             * methode om eht swipen te controleren op goed of fout
+             */
+
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.adapterPosition
 
+                /**
+                 * hier wordt gecontroleerd of de posistie links of rechts is
+                 * en daarmee of het goed of fout is om de juiste message te tonen
+                 */
                 when (direction){
                     ItemTouchHelper.LEFT ->
                         if(!questions[position].questionTrue){
@@ -73,6 +85,9 @@ class MainActivity : AppCompatActivity() {
         return ItemTouchHelper(callback)
     }
 
+    /**
+     *creeeren van toast message bij goed of fout
+     */
     private fun correctAnswerSwiped(questionCorrect: Boolean){
         if(questionCorrect){
             Toast.makeText(this, getString(R.string.correctFeedback), Toast.LENGTH_SHORT).show()
